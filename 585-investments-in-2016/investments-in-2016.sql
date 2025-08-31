@@ -1,4 +1,4 @@
-/* Write your PL/SQL query statement below */
+# Write your MySQL query statement below
 SELECT round(sum(i1.tiv_2016),2) as tiv_2016 From insurance i1 where i1.tiv_2015 IN (
         SELECT tiv_2015
         FROM Insurance
