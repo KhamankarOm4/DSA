@@ -1,6 +1,6 @@
 class Solution {
     public int repeatedNTimes(int[] nums) {
-        HashSet<Integer> seen = new HashSet<>();
+        HashSet seen = new HashSet();
 
         for(int x : nums){
             if(seen.contains(x)){
