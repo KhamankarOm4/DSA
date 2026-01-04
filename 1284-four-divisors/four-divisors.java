@@ -13,7 +13,7 @@ class Solution {
             int p = (int)Math.round(Math.cbrt(x));
             if(p*p*p == x && isPrime(p)){
                 total +=1+p+p*p+x;
-                continue;
+                
             }
 
             boolean found = false;
