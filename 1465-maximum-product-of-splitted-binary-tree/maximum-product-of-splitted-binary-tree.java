@@ -17,7 +17,7 @@ class Solution {
     
         long total = 0 ;
         long best = 0;
-        static final int MOD = 1_000_000_007;
+        int MOD = 1_000_000_007;
         long sum(TreeNode node){
             if(node == null) return 0;
             return node.val + sum(node.left)+sum(node.right);
