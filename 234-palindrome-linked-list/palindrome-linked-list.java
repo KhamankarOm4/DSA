@@ -26,7 +26,7 @@ class Solution {
           right--;
        }
 
-       return left>=right;
+       return left>right;
 
         
     }
