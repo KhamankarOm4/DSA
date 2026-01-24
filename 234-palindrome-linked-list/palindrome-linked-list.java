@@ -21,12 +21,12 @@ class Solution {
        int left = 0;
        int right = list.size()-1;
 
-       while(left<=right && list.get(left)==list.get(right)){
+       while(left<right && list.get(left)==list.get(right)){
           left++;
           right--;
        }
 
-       return left>right;
+       return left>=right;
 
         
     }
