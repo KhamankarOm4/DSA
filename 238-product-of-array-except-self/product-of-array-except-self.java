@@ -3,7 +3,7 @@ class Solution {
        int[] result = new int[nums.length];
        int pre = 1;
        int post= 1;
-       Arrays.fill(result,1);
+  
        for(int i=0;i<nums.length;i++){
           result[i] = pre;
           pre = pre*nums[i];
