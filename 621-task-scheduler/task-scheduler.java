@@ -20,6 +20,6 @@ class Solution {
             }
         }
 
-        return ans>tasks.length?ans:tasks.length;
+        return Math.max(ans,tasks.length);
     }
 }
