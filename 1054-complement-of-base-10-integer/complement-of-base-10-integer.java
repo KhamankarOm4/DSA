@@ -6,7 +6,7 @@ class Solution {
             mask |= mask >>(1<<i);
         }
 
-        return n^mask;
+        return ~n&mask;
         
     }
 }
