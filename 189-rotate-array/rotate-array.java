@@ -1,19 +1,21 @@
-import java.util.*;
-class Solution{
-public void rotate(int[]nums,int k){
-    int n=nums.length;
-    k%=n;
-    reverse(nums,0,n-1);
-    reverse(nums,0,k-1);
-    reverse(nums,k,n-1);
-}
-private void reverse(int[]nums,int start,int end){
-    while(start<end){
-        int temp=nums[start];
-        nums[start]=nums[end];
-        nums[end]=temp;
-        start++;
-        end--;
+class Solution {
+    public void rotate(int[] nums, int k) {
+        int n = nums.length;
+         k = k%n;
+         Queue<Integer> queue = new LinkedList<>();
+
+         for(int i=n-k;i<n;i++){
+            queue.offer(nums[i]);
+         }
+         for(int i=0;i<n-k;i++){
+            queue.offer(nums[i]);
+         }
+         
+         int i =0;
+         while(!queue.isEmpty()){
+           nums[i] = queue.poll();
+           i++;
+         }
+        
     }
-}
 }
