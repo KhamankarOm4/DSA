@@ -11,12 +11,12 @@ class Solution {
             int len = Math.max(len1,len2);
             if(len>right-left){
                 left = i - (len-1)/2;
-                right = i + len/2;
+                right = i + len/2 + 1;
 
             }
 
         }
-        return s.substring(left,right+1);
+        return s.substring(left,right);
     }
 
     public int checkPalindrome(String s, int left,int right){
