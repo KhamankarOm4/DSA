@@ -6,15 +6,14 @@ class Solution {
             map.put(nums[i],i);
         }
 
-       for(int i=0;i<nums.length;i++){
-            int req = target - nums[i];
+        for(int i=0;i<nums.length;i++){
+            int x = target - nums[i];
 
-            if(map.containsKey(req)){
-                if(map.get(req)!=i){
-                    return new int[]{i,map.get(req)};
-                }
+            if(map.containsKey(x)){
+               int y = map.get(x);
+               if( y!= i) return new int[]{i,y};
             }
         }
-       return new int[]{-1,-1};
+        return new int[]{-1,-1};
     }
 }
