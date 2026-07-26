@@ -11,7 +11,7 @@ public int numIslands(char[][] grid) {
         for (int j = 0; j < m; j++)
             if (grid[i][j] == '1') {
                 DFSMarking(grid, i, j);
-                ++count;
+                count++;
             }
     }    
     return count;
