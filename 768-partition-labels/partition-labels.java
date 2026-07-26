@@ -23,7 +23,6 @@ class Solution {
        List<Integer> res = new ArrayList<>();
        for(int i=0;i<intervals.size()-1;i++){
           if(end>=intervals.get(i+1)[0]){
-            start = Math.min(intervals.get(i)[0],start);
             end = Math.max(intervals.get(i+1)[1],end); 
           }else{
            res.add(end-start+1);
