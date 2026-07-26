@@ -6,7 +6,7 @@ class Solution {
        if(n==0 || n==1) return n;
        int prev = 0;
         for(int i=1;i<n;i++){
-            if(points[prev][1]>=points[i][0] && points[prev][1]<=points[i][1]){
+            if(points[prev][1]>=points[i][0]){
                 count++;
             }else{
                prev= i;
