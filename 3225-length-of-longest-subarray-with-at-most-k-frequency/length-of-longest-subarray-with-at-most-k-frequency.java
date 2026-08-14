@@ -5,7 +5,7 @@ class Solution {
         int i = 0;
         int j = 0;
         int max_len = 0;
-        while(i<n && j<n){
+        while((i<n && j<n) && i<=j){
            if(map.getOrDefault(nums[j],0)<k){
              map.put(nums[j],map.getOrDefault(nums[j],0)+1);
              j++;
