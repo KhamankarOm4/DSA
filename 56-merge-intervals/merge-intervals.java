@@ -12,19 +12,18 @@ class Solution {
                 list.add(new int[]{start,end});
                 start = intervals[i][0];
                 end = intervals[i][1];
-                i++;
             }else{
                 end = Math.max(end,intervals[i][1]);
-                i++;
             }
-           
+           i++;
         }  
         list.add(new int[]{start,end});
         int s = list.size();
-        int[][] result = new int[s][];
+        int[][] result = new int[s][2];
         int j = 0;
         for(int[] arr:list){
-            result[j] = arr.clone();
+            result[j][0] = arr[0];
+            result[j][1] = arr[1];
             j++;
         }
        return result;
