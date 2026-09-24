@@ -10,17 +10,17 @@ class Solution {
     for(int i = 1; i < nums.length; i++){
 
         if(nums[i] == nums[i-1]){
-            continue;       // duplicate
+            continue;   
         }
 
         if(nums[i] == nums[i-1] + 1){
             current++;
-        }else{
             longest = Math.max(longest, current);
+        }else{
             current = 1;
         }
     }
 
-    return Math.max(longest, current);
+    return longest;
     }
 }
