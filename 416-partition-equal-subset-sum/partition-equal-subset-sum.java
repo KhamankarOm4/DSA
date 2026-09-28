@@ -24,7 +24,7 @@ class Solution {
             int pick = 2;
             if(t>=nums[i]){
                 pick = dp[i-1][t-nums[i]];
-                
+                dp[i][t] = pick;
             }
             int nopick = dp[i-1][t];
             dp[i][t] = (pick==1||nopick==1)?1:2;
