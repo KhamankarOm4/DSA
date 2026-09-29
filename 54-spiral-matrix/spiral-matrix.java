@@ -3,8 +3,7 @@ class Solution {
        int top = 0; int bottom = matrix.length-1;
        int left = 0; int right = matrix[0].length-1;
        List<Integer> list = new ArrayList<>();
-       while(top<=bottom && left<=right){
-
+       while(left<=right && top<=bottom){
          for(int i=left;i<=right;i++){
             list.add(matrix[top][i]);
          }
@@ -16,19 +15,20 @@ class Solution {
          right--;
 
          if(top<=bottom){
-            for(int i=right;i>=left;i--){
-               list.add(matrix[bottom][i]); 
-            }
-            bottom--;
+             for(int i=right;i>=left;i--){
+               list.add(matrix[bottom][i]);
+               }
+             bottom--;
          }
 
-         if(left<=right){
-            for(int i=bottom;i>=top;i--){
-               list.add(matrix[i][left]); 
-            }
+          if(left<=right){
+             for(int i=bottom;i>=top;i--){
+               list.add(matrix[i][left]);
+               }
             left++;
          }
-       } 
+
+       }
        return list;
     }
 }
