@@ -1,23 +1,18 @@
 class Solution {
     public int[] rearrangeArray(int[] nums) {
-      Queue<Integer> Q1 = new ArrayDeque<>();
-      Queue<Integer> Q2 = new ArrayDeque<>();
-
-       for(int num:nums){
-        if(num<0){
-            Q2.offer(num);
-        }else{
-            Q1.offer(num);
+      int n = nums.length;
+        int[] ans = new int[n];
+        int pos = 0, neg = 1;
+        for(int i=0;i<n;i++) {
+            if(nums[i] >= 0) {
+                ans[pos] = nums[i];
+                pos += 2;
+            }
+            else {
+                ans[neg] = nums[i];
+                neg += 2;
+            }
         }
-       }
-
-       for(int i=0;i<nums.length;i++){
-         if(i%2==0){
-            nums[i] = Q1.poll();
-         }else{
-            nums[i] = Q2.poll();
-         }
-       }
-       return nums; 
+        return ans;
     }
 }
