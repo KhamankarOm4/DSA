@@ -6,7 +6,7 @@ class Solution {
         for(int right=0;right<nums.length;right++){
             map.put(nums[right],map.getOrDefault(nums[right],0)+1);
             while(left<=right && map.getOrDefault(0,0)>k){
-               map.put(nums[left],map.getOrDefault(nums[left],0)-1);
+               map.put(nums[left],map.get(nums[left])-1);
                if(map.get(0)==0) map.remove(0);
                left++;
             }
