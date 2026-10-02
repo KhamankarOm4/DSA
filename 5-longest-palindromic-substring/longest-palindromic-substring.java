@@ -22,7 +22,6 @@ class Solution {
     public int checkPalindrome(String s, int left,int right){
         int L = left;
         int R = right;
-        
         while(L>=0 && R<s.length() && s.charAt(L)==s.charAt(R)){
             L--;
             R++;
